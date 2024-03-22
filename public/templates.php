@@ -1,7 +1,7 @@
 <?php
 function pdo_connect_mysql() {
     $options = array(
-        PDO::MYSQL_ATTR_SSL_CA => '/var/www/html/DigiCertGlobalRootCA.crt.pem'
+        PDO::MYSQL_ATTR_SSL_CA => '/home/site/wwwroot/ssl/DigiCertGlobalRootCA.crt.pem'
     );
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'idp-database.mysql.database.azure.com';
