@@ -1,12 +1,15 @@
 <?php
 function pdo_connect_mysql() {
+    $options = array(
+        PDO::MYSQL_ATTR_SSL_CA => '/ssl/DigiCertGlobalRootG2.crt.pem'
+    );
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'idp-database.mysql.database.azure.com';
     $DATABASE_USER = 'idpadmin';
     $DATABASE_PASS = 'password112!';
     $DATABASE_NAME = 'itemdatabase';
     try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS, $options);
     } catch (PDOException $exception) {
     	// If there is an error with the connection, stop the script and display the error.
     	exit('Failed to connect to MySQL: ' . $exception);
