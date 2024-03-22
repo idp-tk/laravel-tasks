@@ -1,10 +1,10 @@
 <?php
 function pdo_connect_mysql() {
     // Update the details below with your MySQL details
-    $DATABASE_HOST = 'lhcp4028.webapps.net';
-    $DATABASE_USER = 'h75tbc3z_idpadmin';
-    $DATABASE_PASS = 'terminal998';
-    $DATABASE_NAME = 'h75tbc3z_itemdatabase';
+    $DATABASE_HOST = 'idp-database.mysql.database.azure.com';
+    $DATABASE_USER = 'idpadmin';
+    $DATABASE_PASS = 'terminal998!';
+    $DATABASE_NAME = 'itemdatabase';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {

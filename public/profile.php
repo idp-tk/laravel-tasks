@@ -6,14 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.php');
 	exit;
 }
-$DATABASE_HOST = 'lhcp4028.webapps.net';
-$DATABASE_USER = 'h75tbc3z_idpadmin';
-$DATABASE_PASS = 'terminal998';
-$DATABASE_NAME = 'h75tbc3z_itemdatabase';
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-if (mysqli_connect_errno()) {
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
+include 'dbconnect.php';
 // We don't have the password or email info stored in sessions, so instead, we can get the results from the database.
 $stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
 // In this case we can use the account ID to get the account info.
