@@ -75,7 +75,7 @@ header .link-icons {
 
 header .link-icons a {
   text-decoration: none;
-  color: #3E78B2;
+  color: lightcoral;
   padding: 0 10px;
 }
 
@@ -236,7 +236,7 @@ main > .product form input[type=number] {
 }
 
 main > .product form input[type=submit] {
-  background: #3E78B2;
+  background: lightcoral;
   border: 0;
   color: #FFFFFF;
   width: 400px;
@@ -249,7 +249,7 @@ main > .product form input[type=submit] {
 }
 
 main > .product form input[type=submit]:hover {
-  background: #434f61;
+  background: rgb(240, 147, 147);
 }
 
 main > .products h1 {
@@ -281,7 +281,7 @@ main > .products .buttons a {
 }
 
 main > .products .buttons a:hover {
-  background: #434f61;
+  background: rgb(240, 147, 147);
 }
 
 main .cart h1 {
@@ -371,7 +371,7 @@ main .cart .buttons input[type=submit] {
   margin-left: 5px;
   padding: 12px 20px;
   border: 0;
-  background: #3E78B2;
+  background: lightcoral;
   color: #FFFFFF;
   font-size: 14px;
   font-weight: bold;
@@ -380,7 +380,7 @@ main .cart .buttons input[type=submit] {
 }
 
 main .cart .buttons input[type=submit]:hover {
-  background: #434f61;
+  background: rgb(240, 147, 147);
 }
 
 main .placeorder h1 {

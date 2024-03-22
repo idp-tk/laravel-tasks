@@ -7,7 +7,8 @@
 }
 
 $textColor: #333;
-$accentColor: #3E78B2;//#ED6A5A;
+$hoverAccentColor: rgb(240, 147, 147);
+$accentColor: lightcoral;//#3E78B2;//#ED6A5A;
 $whiteColor: #fff;
 $greyColor: #ccc;
 
@@ -219,7 +220,7 @@ main > .product form input[type="submit"] {
 	cursor: pointer;
 }
 main > .product form input[type="submit"]:hover {
-	background: #434f61;
+	background: $hoverAccentColor;
 }
 main > .products h1 {
 	display: block;
@@ -247,7 +248,7 @@ main > .products .buttons a {
 	border-radius: 5px;
 }
 main > .products .buttons a:hover {
-	background: #434f61;
+	background: $hoverAccentColor;
 }
 main .cart h1 {
 	display: block;
@@ -328,7 +329,7 @@ main .cart .buttons input[type="submit"] {
 	border-radius: 5px;
 }
 main .cart .buttons input[type="submit"]:hover {
-	background: #434f61;
+	background: $hoverAccentColor;
 }
 main .placeorder h1 {
 	display: block;
@@ -359,6 +360,6 @@ footer {
 	width: 100%;
 }
 strong{
-	color: lightcoral;
+	color: $accentColor;
 	font-size: 1.25rem;
 }
