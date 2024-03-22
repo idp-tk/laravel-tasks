@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'idp-database.mysql.database.azure.com';
     $DATABASE_USER = 'idpadmin';
-    $DATABASE_PASS = 'terminal998!';
+    $DATABASE_PASS = 'password112!';
     $DATABASE_NAME = 'itemdatabase';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
