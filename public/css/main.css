@@ -80,7 +80,7 @@ header .link-icons a {
 }
 
 header .link-icons a:hover {
-  color: #4e5c70;
+  color: rgb(201, 130, 0);
 }
 
 header .link-icons a i {
