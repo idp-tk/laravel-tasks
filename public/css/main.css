@@ -75,7 +75,7 @@ header .link-icons {
 
 header .link-icons a {
   text-decoration: none;
-  color: lightcoral;
+  color: orange;
   padding: 0 10px;
 }
 
@@ -236,7 +236,7 @@ main > .product form input[type=number] {
 }
 
 main > .product form input[type=submit] {
-  background: lightcoral;
+  background: orange;
   border: 0;
   color: #FFFFFF;
   width: 400px;
@@ -249,7 +249,7 @@ main > .product form input[type=submit] {
 }
 
 main > .product form input[type=submit]:hover {
-  background: rgb(240, 147, 147);
+  background: rgb(201, 130, 0);
 }
 
 main > .products h1 {
@@ -281,7 +281,7 @@ main > .products .buttons a {
 }
 
 main > .products .buttons a:hover {
-  background: rgb(240, 147, 147);
+  background: rgb(201, 130, 0);
 }
 
 main .cart h1 {
@@ -371,7 +371,7 @@ main .cart .buttons input[type=submit] {
   margin-left: 5px;
   padding: 12px 20px;
   border: 0;
-  background: lightcoral;
+  background: orange;
   color: #FFFFFF;
   font-size: 14px;
   font-weight: bold;
@@ -380,7 +380,7 @@ main .cart .buttons input[type=submit] {
 }
 
 main .cart .buttons input[type=submit]:hover {
-  background: rgb(240, 147, 147);
+  background: rgb(201, 130, 0);
 }
 
 main .placeorder h1 {
@@ -417,6 +417,6 @@ footer {
 }
 
 strong {
-  color: lightcoral;
+  color: orange;
   font-size: 1.25rem;
 }/*# sourceMappingURL=main.css.map */
