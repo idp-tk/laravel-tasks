@@ -15,7 +15,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $total_products = $pdo->query('SELECT * FROM items WHERE Category = "GraphicsCards"')->rowCount();
 ?>
 
-<?=template_header('GPUs')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('GPUs');
+}
+else{
+	template_header_loggedin('GPUs');
+}
+?>
 
 <div class="products content-wrapper">
     <h1>GPUs</h1>

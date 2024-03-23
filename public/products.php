@@ -16,7 +16,14 @@ $total_products = $pdo->query('SELECT * FROM items')->rowCount();
 ?>
 
 
-<?=template_header('All Products')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('All Products');
+}
+else{
+	template_header_loggedin('All Products');
+}
+?>
 
 <div class="products content-wrapper">
     <h1>All Products</h1>

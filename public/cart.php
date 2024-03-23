@@ -83,7 +83,14 @@ if ($products_in_cart) {
 }
 ?>
 
-<?=template_header('Cart')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('Cart');
+}
+else{
+	template_header_loggedin('Cart');
+}
+?>
 
 <div class="cart content-wrapper">
     <h1>Shopping Cart</h1>

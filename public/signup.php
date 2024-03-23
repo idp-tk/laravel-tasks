@@ -1,3 +1,6 @@
+<?php
+session_destroy();
+?>
 <?=template_header('Sign Up')?>
 
 <div class="login">

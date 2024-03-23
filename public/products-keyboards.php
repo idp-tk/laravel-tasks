@@ -15,7 +15,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $total_products = $pdo->query('SELECT * FROM items WHERE Category = "Keyboards"')->rowCount();
 ?>
 
-<?=template_header('Keyboards')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('Keyboards');
+}
+else{
+	template_header_loggedin('Keyboards');
+}
+?>
 
 <div class="products content-wrapper">
     <h1>Keyboards</h1>

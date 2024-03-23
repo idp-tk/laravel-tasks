@@ -1,9 +1,4 @@
 <?php
-
-if (!isset($_POST['search-value'])) {
-	// Could not get the data that should have been sent.
-	exit('Please enter a valid search');
-}
 $searchValue = ($_POST['search-value']);
 //
 // The amounts of products to show on each page
@@ -13,8 +8,6 @@ $current_page = isset($_GET['p']) && is_numeric($_GET['p']) ? (int)$_GET['p'] : 
 // Select products ordered by the date added
 $stmt = $pdo->prepare("SELECT * FROM items WHERE Name LIKE '%".$searchValue."%'");
 // bindValue will allow us to use an integer in the SQL statement, which we need to use for the LIMIT clause
-$stmt->bindValue(1, ($current_page - 1) * $num_products_on_each_page, PDO::PARAM_INT);
-$stmt->bindValue(2, $num_products_on_each_page, PDO::PARAM_INT);
 $stmt->execute();
 // Fetch the products from the database and return the result as an Array
 $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -22,11 +15,18 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $total_products = $pdo->query("SELECT * FROM items WHERE Name LIKE '%".$searchValue."%'")->rowCount();
 ?>
 
-<?=template_header('Products')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('Search');
+}
+else{
+	template_header_loggedin('Search');
+}
+?>
 
 <div class="products content-wrapper">
-    <h1>All Products</h1>
-    <p><?=$total_products?> Products</p>
+    <h1>Search Results  </h1>
+    <p><?=$total_products?> Products<!-- -  <script>document.write(localStorage.getItem("responseTime"))</script>--></p>
     <div class="products-wrapper">
         <?php foreach ($products as $product): ?>
         <a href="index.php?page=product&Id=<?=$product['Id']?>" class="product">
@@ -34,7 +34,7 @@ $total_products = $pdo->query("SELECT * FROM items WHERE Name LIKE '%".$searchVa
             <span class="name"><?=$product['Name']?></span>
             <span class="price">
                 &#163;<?=$product['Price']?>
-                <?php if ($product['RRP'] > 0): ?>
+                <?php if ($product['RRP'] > $product['Price']): ?>
                 <span class="rrp">&#163;<?=$product['RRP']?></span>
                 <?php endif; ?>
             </span>

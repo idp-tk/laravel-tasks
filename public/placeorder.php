@@ -1,4 +1,11 @@
-<?=template_header('Order Placed')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('Order Placed');
+}
+else{
+	template_header_loggedin('Order Placed');
+}
+?>
 
 <div class="placeorder content-wrapper">
     <h1>Your Order Has Been Placed</h1>

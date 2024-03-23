@@ -15,7 +15,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $total_products = $pdo->query('SELECT * FROM items WHERE Category = "Processors"')->rowCount();
 ?>
 
-<?=template_header('Processors')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('Processors');
+}
+else{
+	template_header_loggedin('Processors');
+}
+?>
 
 <div class="products content-wrapper">
     <h1>Processors</h1>

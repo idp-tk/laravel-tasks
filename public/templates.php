@@ -51,8 +51,8 @@ echo <<<EOT
                     <span>$num_items_in_cart</span>
                     </a>
                 </div>
-                <form action = "index.php?page=search" class="search-form">
-                <input class="search-box" type="search" placeholder="Search" aria-label="Search" id="search-box" name="search-value" onfocus="this.value=''">
+                <form action = "index.php?page=search" class="search-form" method="post">
+                <input class="search-box" type="search" placeholder="Search" aria-label="Search" id="search-box" name="search-value" <!-- onfocus="this.value=''-->">
                 </form>
             </div>
         </header>
@@ -97,8 +97,8 @@ function template_header_loggedin($title) {
                         <span>$num_items_in_cart</span>
                         </a>
                     </div>
-                    <form action = "index.php?page=search" class="search-form">
-                    <input class="search-box" type="search" placeholder="Search" aria-label="Search" id="search-box" name="search-value" onfocus="this.value=''">
+                    <form action = "index.php?page=search" class="search-form" method="post">
+                    <input class="search-box" type="search" placeholder="Search" aria-label="Search" id="search-box" name="search-value" <!-- onfocus="this.value=''-->">
                     </form>
                 </div>
             </header>

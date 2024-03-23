@@ -17,7 +17,15 @@ if (isset($_GET['Id'])) {
 }
 ?>
 
-<?=template_header('Product')?>
+<?php
+if (!isset($_SESSION['loggedin'])) {
+	template_header('Product');
+}
+else{
+	template_header_loggedin('Product');
+}
+?>
+
 
 <div class="product content-wrapper">
     <img src="/<?=$product['ImagePath']?>" width="500" height="500" alt="<?=$product['Name']?>">
