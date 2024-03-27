@@ -33,7 +33,7 @@ echo <<<EOT
 	<body>
         <header>
             <div class="content-wrapper">
-                <h1>CyberMart -&nbsp;<strong>Galileo</strong></h1>
+                <h1>CyberMart -&nbsp;<strong>Orange</strong></h1>
                 <nav>
                     <a href="index.php?page=products">All</a>
                     <a href="index.php?page=products-ssd">SSDs</a>
@@ -76,7 +76,7 @@ function template_header_loggedin($title) {
         <body>
             <header>
                 <div class="content-wrapper">
-                    <h1>CyberMart</h1>
+                    <h1>CyberMart -&nbsp;<strong>Orange</strong></h1>
                     <nav>
                     <a href="index.php?page=products">All</a>
                     <a href="index.php?page=products-ssd">SSDs</a>
