@@ -22,6 +22,4 @@ if ($pdo->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $pdo->error;
 }
 
-$pdo->close();
-?>
 ?>
