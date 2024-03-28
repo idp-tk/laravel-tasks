@@ -29,6 +29,7 @@ echo <<<EOT
 		<link href="css/main.css" rel="stylesheet" type="text/css">
         <link href="css/login.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 	</head>
 	<body>
         <header>
@@ -72,6 +73,7 @@ function template_header_loggedin($title) {
             <link href="css/main.css" rel="stylesheet" type="text/css">
             <link href="css/login.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
+            <link rel="icon" type="image/x-icon" href="img/favicon.ico">
         </head>
         <body>
             <header>
