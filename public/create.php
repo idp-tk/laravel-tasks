@@ -14,14 +14,14 @@ $email = $_REQUEST['email'];
 $sql = "INSERT INTO accounts (Username, Password, Email)
 VALUES ('$username', '$password', '$email')";
 
-if ($con->query($sql) === TRUE) {
+if ($pdo->query($sql) === TRUE) {
   //echo "New record created successfully";
   header('Location: index.php?page=login');
   exit;
 } else {
-  echo "Error: " . $sql . "<br>" . $con->error;
+  echo "Error: " . $sql . "<br>" . $pdo->error;
 }
 
-$con->close();
+$pdo->close();
 ?>
 ?>
