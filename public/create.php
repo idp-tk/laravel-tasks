@@ -19,7 +19,7 @@ if ($pdo->query($sql) === TRUE) {
   header('Location: index.php?page=login');
   exit;
 } else {
-  echo "Error: " . $sql . "<br>" . $pdo->error;
+  echo "Error: " . $sql . "<br>";
 }
 
 ?>
