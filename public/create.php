@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'dbconnect.php';
+//include 'dbconnect.php';
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	// Could not get the data that should have been sent.
