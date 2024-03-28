@@ -107,7 +107,7 @@ else{
             <tbody>
                 <?php if (empty($products)): ?>
                 <tr>
-                    <td colspan="5" style="text-align:center;">You have no products added in your Shopping Cart</td>
+                    <td colspan="5" style="text-align:center;">You have no products in your cart.</td>
                 </tr>
                 <?php else: ?>
                 <?php foreach ($products as $product): ?>

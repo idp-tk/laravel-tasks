@@ -45,6 +45,7 @@ header h1 {
 	padding: 24px 0;
 }
 header nav {
+	margin-left: 15%;
 	display: flex;
 	flex-grow: 1;
 	flex-basis: 0;
@@ -362,4 +363,20 @@ footer {
 strong{
 	color: $accentColor;
 	font-size: 1.25rem;
+}
+main > .placeorder form{
+	text-align: center	;
+}
+
+main > .placeorder form input[type="submit"] {
+	background: $accentColor;
+	border: 0;
+	color: $whiteColor;
+	width: 400px;
+	padding: 12px 0;
+	//text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
 }
