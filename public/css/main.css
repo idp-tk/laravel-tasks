@@ -42,7 +42,8 @@ header h1 {
   flex-basis: 0;
   font-size: 20px;
   margin: 0;
-  padding: 24px 0;
+  padding: 32px 0;
+  text-align: center;
 }
 
 header nav {
@@ -404,8 +405,8 @@ main .placeorder p {
 }
 
 .search-box {
-  margin: 10%;
-  padding: 4%;
+  margin-top: 17%;
+  margin-left: 10%;
 }
 
 footer {
