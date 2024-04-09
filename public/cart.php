@@ -1,4 +1,5 @@
 <?php
+echo '<script type="text/javascript">const t0 = performance.now(); localStorage.setItem("t0", t0);</script>';
 // If the user clicked the add to cart button on the product page we can check for the form data
 if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['product_id']) && is_numeric($_POST['quantity'])) {
     // Set the post variables so we easily identify them, also make sure they are integer
@@ -81,6 +82,8 @@ if ($products_in_cart) {
         $subtotal += (float)$product['Price'] * (int)$products_in_cart[$product['Id']];
     }
 }
+echo '<script type="text/javascript">const t1 = performance.now(); localStorage.setItem("t1", t1);</script>';
+echo '<script type="text/javascript">localStorage.getItem("t1");localStorage.getItem("t0"); rawTime = t1 - t0; rawTimeFixed = rawTime.toFixed(2); responseTime = `Response Time: ${rawTimeFixed} ms.`; localStorage.setItem("responseTime", responseTime);</script>';
 ?>
 
 <?php
@@ -133,6 +136,7 @@ else{
             </tbody>
         </table>
         <div class="subtotal">
+        <span class="text"><script>document.write(localStorage.getItem("responseTime"))</script></span>
             <span class="text">Subtotal</span>
             <span class="price">&#163;<?=$subtotal?></span>
         </div>
