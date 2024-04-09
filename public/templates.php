@@ -41,7 +41,6 @@ echo <<<EOT
                     <a href="index.php?page=products-gpu">GPUs</a>
                     <a href="index.php?page=products-processors">Processors</a>
                     <a href="index.php?page=products-mice">Mice</a>
-                    <a href="index.php?page=products-keyboards">Keyboards</a>
                 </nav>
                 <div class="link-icons">
                     <a href="index.php?page=login" title="Login">
@@ -85,7 +84,6 @@ function template_header_loggedin($title) {
                     <a href="index.php?page=products-gpu">GPUs</a>
                     <a href="index.php?page=products-processors">Processors</a>
                     <a href="index.php?page=products-mice">Mice</a>
-                    <a href="index.php?page=products-keyboards">Keyboards</a>
                     </nav>
                     <div class="link-icons">
                         <a href="index.php?page=profile" title="Profile">
